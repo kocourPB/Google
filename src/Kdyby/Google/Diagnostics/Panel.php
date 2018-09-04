@@ -115,7 +115,7 @@ class Panel implements IBarPanel
 		if ($this->current) {
 			return;
 		}
-		$this->calls[] = $this->current = (object) array(
+		$this->calls[] = [$this, 'current'] = (object) array(
 			'url' => $request->getUrl(),
 			'params' => $request->getQueryParams(),
 			'result' => NULL,
@@ -180,9 +180,9 @@ class Panel implements IBarPanel
 
 	public function register(Curl $client)
 	{
-		$client->onRequest[] = $this->begin;
-		$client->onError[] = $this->error;
-		$client->onSuccess[] = $this->success;
+		$client->onRequest[] = [$this, 'begin'];
+		$client->onError[] = [$this, 'error'];
+		$client->onSuccess[] = [$this, 'success'];
 
 		self::getDebuggerBar()->addPanel($this);
 	}
