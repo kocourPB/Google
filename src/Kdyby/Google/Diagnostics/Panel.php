@@ -45,8 +45,10 @@ if (!class_exists('Tracy\Dumper')) {
  * @property callable $failure
  * @property callable $success
  */
-class Panel extends Nette\Object implements IBarPanel
+class Panel implements IBarPanel
 {
+
+	use \Nette\SmartObject;
 
 	/**
 	 * @var int logged time
