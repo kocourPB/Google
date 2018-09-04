@@ -115,7 +115,8 @@ class Panel implements IBarPanel
 		if ($this->current) {
 			return;
 		}
-		$this->calls[] = [$this, 'current'] = (object) array(
+
+		$this->current = (object) array(
 			'url' => $request->getUrl(),
 			'params' => $request->getQueryParams(),
 			'result' => NULL,
@@ -123,6 +124,8 @@ class Panel implements IBarPanel
 			'info' => array(),
 			'time' => 0,
 		);
+
+		$this->calls[] = $this->current;
 	}
 
 
