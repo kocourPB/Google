@@ -1,4 +1,4 @@
-Kdyby/Google
+kocourPB/google
 ======
 
 [![Build Status](https://travis-ci.org/Kdyby/Google.svg?branch=master)](https://travis-ci.org/Kdyby/Google)

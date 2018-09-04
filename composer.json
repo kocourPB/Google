@@ -1,5 +1,5 @@
 {
-	"name": "kdyby/google",
+	"name": "kocourPB/google",
 	"type": "library",
 	"description": "Google API wrapper and authentication for Nette Framework",
 	"keywords": ["nette", "google", "authentication", "auth", "login"],
@@ -21,7 +21,7 @@
 		}
 	],
 	"require": {
-		"nette/nette": "~2.1@dev",
+		"nette/nette": "^2.4",
 
 		"ext-curl": "*",
 		"ext-json": "*",
