@@ -62,18 +62,4 @@ class Curl extends Google_IO_Curl
 		return $res;
 	}
 
-
-
-	/**
-	 * Callbacks
-	 * @param string $name
-	 * @param array $args
-	 * @return mixed
-	 * @throws MemberAccessException
-	 */
-	public function __call($name, $args)
-	{
-		return ObjectMixin::call($this, $name, $args);
-	}
-
 }
